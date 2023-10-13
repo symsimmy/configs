@@ -23,49 +23,6 @@ job "miverse-game-server" {
       }
 
 
-
-         template {
-        data = <<EOF
-     {
-  "cluster": {
-    "node": {
-      "id": "",
-      "name": "game"
-    }
-  },
-  "transport": {
-    "grpc": {
-      "server": {
-        "addr": ":0"
-      }
-    }
-  },
-  "packet": {
-    "endian": "big",
-    "seqBytesLen": 2,
-    "routeBytesLen": 2
-  },
-  "locate": {
-    "redis": {
-      "addr": "192.168.2.50:6379",
-      "db": 0,
-      "username": "",
-      "password": "TepX4NQd",
-      "maxRetries": 3,
-      "prefix": "due"
-    }
-  },
-  "registry": {
-    "consul": {
-      "addr": "http://192.168.2.50:8500"
-    }
-  }
-}
-EOF
-
-        destination = "/app/Configs/dev.json"
-      }
-
    artifact {
         source      = "https://raw.githubusercontent.com/symsimmy/configs/main/dev.json"
         destination = "/app/Configs/dev.json"
