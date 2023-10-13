@@ -1,0 +1,35 @@
+{
+    "cluster": {
+      "node": {
+        "id": "",
+        "name": "game"
+      }
+    },
+    "transport": {
+      "grpc": {
+        "server": {
+          "addr": ":0"
+        }
+      }
+    },
+    "packet": {
+      "endian": "big",
+      "seqBytesLen": 2,
+      "routeBytesLen": 2
+    },
+    "locate": {
+      "redis": {
+        "addr": "r-2zezjbfnmkanbginul.redis.rds.aliyuncs.com",
+        "db": 0,
+        "username": "",
+        "password": "TepX4NQd",
+        "maxRetries": 3,
+        "prefix": "due"
+      }
+    },
+    "registry": {
+      "consul": {
+        "addr": "http://nlb-3jk6qjfyh8sf52gnzc.cn-beijing.nlb.aliyuncs.com:8500"
+      }
+    }
+  }
