@@ -67,7 +67,7 @@ EOF
       }
 
    artifact {
-        source      = "https://raw.githubusercontent.com/symsimmy/configs/dev.json"
+        source      = "https://raw.githubusercontent.com/symsimmy/configs/main/dev.json"
         destination = "/app/Configs/dev.json"
       }
 
